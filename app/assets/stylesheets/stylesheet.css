@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{background-color: #BBBFC2;}
+
+.container {
+    width: 980px;
+    margin: 0 auto 40px;
+    background-color: white;
+    overflow: auto;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+header{
+    margin-bottom: 60px;
+}
+
+header img {
+    display:block;
+    margin: auto;
+    width:100%;
+}
+
+#babysteps {
+     /* IE6-9 fallback*/
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 );
+    background: -moz-linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
+    background: -webkit-linear-gradient(left, #ebeced 95%,#d1d5d6 100%);
+    background: linear-gradient(to right, #ebeced 95%,#d1d5d6 100%);
+    width:300px;
+    float:left;
+    position: relative;
+    padding-bottom: 195px;
+    overflow: hidden;
+}
+
+#babysteps > div{
+    color: #9BA0A4;
+    cursor: pointer;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 60px;
+    text-align: right;
+    border-bottom: 1px solid #FFF;
+    position: relative;
+    padding-right: 78px;
+    /* Need falback/polyfill- CSS3 transitions only supported IE10+*/
+    transition: background-color 200ms linear;
+}
+
+#babysteps div > span.text{
+    position: relative;
+    font-size: 18px;
+}
+
+#babysteps div.active{
+    background-color: white;
+}
+
+#babysteps div.active > span.text{
+    color: #36ABE1;
+    font-family: 'Source Sans Pro Semibold', sans-serif;
+}
+
+#babysteps div > i.icon{
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    right: 24px;
+    top: 17.5px;
+}
+
+#step-container{
+    position: relative;
+    width: 680px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.step{
+    padding: 0 70px;
+    opacity:0;
+    position:absolute;
+    transition:opacity 200ms linear;
+
+}
+/* Need falback/polyfill- CSS3 transitions only supported IE10+*/
+#currentstep{
+    opacity:1;
+}
+
+
+.step-content{
+    font-size: 13px;
+    font-family: Helvetica, sans-serif;
+    color: #65686F;
+    line-height: 18px;
+    margin-bottom: 60px;
+}
+
+.step-content > p:first-of-type{
+    margin-bottom: 20px;
+}
+
+.step-content > span {
+    font-size: 13px;
+    color: #65686F;
+    position: relative;
+    margin-top: 40px;
+    display: block;
+}
+
+.links{
+    color: #6FBEE7;
+    text-decoration: none;
+}
+
+
+/* Icons */
+i.icon-note{
+    background: url("../images/icons/sprites/icons_small.png") no-repeat 0 0;
+}
+div.active > i.icon-note{
+    background: url("../images/icons/sprites/icons_small.png") no-repeat 0 -175px;
+}
+
+i.icon-snowball{
+    background: url("../images/icons/sprites/icons_small.png") no-repeat 0 -25px;
+}
+div.active > i.icon-snowball{
+    background: url("../images/icons/sprites/icons_small.png") no-repeat 0 -200px;
+}
+
+i.icon-piggybank{
+    background: url("../images/icons/sprites/icons_small.png") no-repeat 0 -50px;
+}
+div.active > i.icon-piggybank{
+    background: url("../images/icons/sprites/icons_small.png") no-repeat 0 -225px;
+}
+
+i.icon-bars{
+    background: url("../images/icons/sprites/icons_small.png") no-repeat 0 -75px;
+}
+div.active > i.icon-bars{
+    background: url("../images/icons/sprites/icons_small.png") no-repeat 0 -250px;
+}
+
+i.icon-book{
+    background: url("../images/icons/sprites/icons_small.png") no-repeat 0 -100px;
+}
+div.active > i.icon-book{
+    background: url("../images/icons/sprites/icons_small.png") no-repeat 0 -275px;
+}
+
+i.icon-house{
+    background: url("../images/icons/sprites/icons_small.png") no-repeat 0 -125px;
+}
+div.active > i.icon-house{
+    background: url("../images/icons/sprites/icons_small.png") no-repeat 0 -300px;
+}
+
+i.icon-hand{
+    background: url("../images/icons/sprites/icons_small.png") no-repeat 0 -150px;
+}
+div.active > i.icon-hand{
+    background: url("../images/icons/sprites/icons_small.png") no-repeat 0 -325px;
+}
